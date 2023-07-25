@@ -1,0 +1,13 @@
+service:
+  name: api-ecommerce
+  description: API Ecommerce
+  baseUrl: /api/ecommerce
+  docsBaseUrl: /docs/ecommerce
+  apiVersion: 1.0.0
+  appVersion: 1.0.0
+
+server:
+  host: 127.0.0.1
+  port: 3000
+  hostname: 127.0.0.1:3000
+  swaggerSchema: http
