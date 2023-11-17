@@ -5,13 +5,12 @@ import Redis from 'ioredis';
 export class ViewsService {
   constructor(
     @Inject('REDIS_CLIENT')
-    private readonly redis: Redis
+    private readonly redis: Redis,
   ) {
     this.redis.set('pageView', 0);
   }
 
   async getPageViews() {
-    return  this.redis.incr('pageView');
+    return this.redis.incr('pageView');
   }
-  
 }

@@ -4,8 +4,8 @@ import { ViewsController } from './views.controller';
 import { RedisModule } from '../redis/redis.module';
 
 @Module({
-  imports: [ RedisModule],
+  imports: [RedisModule],
   controllers: [ViewsController],
-  providers: [ViewsService]
+  providers: [ViewsService],
 })
 export class ViewsModule {}
