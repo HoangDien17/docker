@@ -1,13 +1,19 @@
 service:
-  name: api-ecommerce
-  description: API Ecommerce
-  baseUrl: /api/ecommerce
-  docsBaseUrl: /docs/ecommerce
+  name: api-information
+  description: API Information
+  baseUrl: /api/information
+  docsBaseUrl: /docs/information
   apiVersion: 1.0.0
   appVersion: 1.0.0
 
 server:
   host: 127.0.0.1
-  port: 3000
-  hostname: 127.0.0.1:3000
+  port: 4000
+  hostname: 127.0.0.1:4000
   swaggerSchema: http
+
+redis:
+  url: redis://redis-cache:6379
+
+mongodb:
+  url: mongodb://mongodb-app:27017/test

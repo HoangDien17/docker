@@ -18,6 +18,6 @@ describe('Config', () => {
     expect(provider).toBeDefined();
 
     expect(provider.get('server.host')).toBe('127.0.0.1');
-    expect(provider.get('server.port')).toBe(3000);
+    expect(provider.get('server.port')).toBe(4000);
   });
 });

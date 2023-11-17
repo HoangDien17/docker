@@ -6,10 +6,12 @@ import { LoggerModule } from 'nestjs-pino';
 import * as pino from 'pino';
 import { APP_FILTER } from '@nestjs/core';
 import { AnyExceptionFilter } from './filters/any-exception.filter';
+import { ViewsModule } from './modules/views/views.module';
 
 @Module({
   imports: [
     ConfigModule,
+    ViewsModule,
     LoggerModule.forRootAsync({
       useFactory: async () => {
         return {

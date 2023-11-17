@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "paths": {
-    "/api/ecommerce": {
+    "/api/information": {
       "get": {
         "operationId": "ping",
         "summary": "",
@@ -13,18 +13,38 @@
           }
         }
       }
+    },
+    "/api/information/views": {
+      "get": {
+        "operationId": "GetPageViews",
+        "summary": "",
+        "description": "Get page views",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Get view details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "info": {
-    "title": "api-ecommerce API spec",
-    "description": "API Ecommerce | [swagger.json](swagger.json) | [swagger-2.0.json](swagger-2.0.json)",
+    "title": "api-information API spec",
+    "description": "API Information | [swagger.json](swagger.json) | [swagger-2.0.json](swagger-2.0.json)",
     "version": "1.0.0",
     "contact": {}
   },
   "tags": [],
   "servers": [
     {
-      "url": "http://127.0.0.1:3000"
+      "url": "http://127.0.0.1:4000"
     }
   ],
   "components": {

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/api/ecommerce": {
+    "/api/information": {
       "get": {
         "operationId": "ping",
         "summary": "",
@@ -12,17 +12,36 @@
           }
         }
       }
+    },
+    "/api/information/views": {
+      "get": {
+        "operationId": "GetPageViews",
+        "summary": "",
+        "description": "Get page views",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Get view details",
+            "schema": {
+              "type": "number"
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
     }
   },
   "info": {
-    "title": "api-ecommerce API spec",
-    "description": "API Ecommerce | [swagger.json](swagger.json) | [swagger-2.0.json](swagger-2.0.json)",
+    "title": "api-information API spec",
+    "description": "API Information | [swagger.json](swagger.json) | [swagger-2.0.json](swagger-2.0.json)",
     "version": "1.0.0",
     "contact": {}
   },
   "tags": [],
   "swagger": "2.0",
-  "host": "127.0.0.1:3000",
+  "host": "127.0.0.1:4000",
   "schemes": [
     "http"
   ],
