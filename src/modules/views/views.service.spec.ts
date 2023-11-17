@@ -6,8 +6,8 @@ describe('ViewsService', () => {
 
   const mockedRedisClient = {
     set: jest.fn(),
-    incr: jest.fn().mockResolvedValue(3)
-  }
+    incr: jest.fn().mockResolvedValue(3),
+  };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -15,8 +15,8 @@ describe('ViewsService', () => {
         ViewsService,
         {
           provide: 'REDIS_CLIENT',
-          useValue: mockedRedisClient
-        }
+          useValue: mockedRedisClient,
+        },
       ],
     }).compile();
 
@@ -29,7 +29,7 @@ describe('ViewsService', () => {
 
   describe('getPageViews', () => {
     it('should return data', async () => {
-      expect(await service.getPageViews()).toBe(3)
-    })
-  })
+      expect(await service.getPageViews()).toBe(3);
+    });
+  });
 });

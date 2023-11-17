@@ -7,16 +7,16 @@ describe('ViewsController', () => {
 
   const mockedViewsService = {
     getPageViews: jest.fn(),
-  }
+  };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [ViewsController],
       providers: [ViewsService],
     })
-    .overrideProvider(ViewsService)
-    .useValue(mockedViewsService)
-    .compile();
+      .overrideProvider(ViewsService)
+      .useValue(mockedViewsService)
+      .compile();
 
     controller = module.get<ViewsController>(ViewsController);
   });

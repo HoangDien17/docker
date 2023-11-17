@@ -1,4 +1,4 @@
-import { Controller, Get, HttpStatus} from '@nestjs/common';
+import { Controller, Get, HttpStatus } from '@nestjs/common';
 import { ViewsService } from './views.service';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 
