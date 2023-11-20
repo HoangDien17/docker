@@ -6,6 +6,6 @@ WORKDIR ${WORK_DIR}
 
 COPY . .
 
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 CMD yarn run start:dev
